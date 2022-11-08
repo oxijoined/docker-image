@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN git clone https://github.com/oxijoined/rules_of_nature rules
 
 WORKDIR /princeprocessor
-RUN git clone https://github.com/hashcat/princeprocessor.git && cd princeprocessor/src && make && install -m 755 *.bin /usr/local/bin/
+RUN git clone https://github.com/hashcat/princeprocessor.git && cd princeprocessor/src && make install
 
 WORKDIR /hashcat
 RUN git clone https://github.com/hashcat/hashcat.git . && \
