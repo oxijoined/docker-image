@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential && \
     rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/oxijoined/rules_of_nature rules
+RUN apt get install wget
+RUN apt get install p7zip-full
 WORKDIR /hashcat
 
 RUN git clone https://github.com/hashcat/hashcat.git . && \
