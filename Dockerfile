@@ -11,11 +11,11 @@ ENV LD_LIBRARY_PATH /usr/local/nvidia/lib:/usr/local/nvidia/lib64:${LD_LIBRARY_P
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     git \
+    wget \
+    p7zip-full \
     build-essential && \
     rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/oxijoined/rules_of_nature rules
-RUN apt get install wget
-RUN apt get install p7zip-full
 RUN git clone https://github.com/hashcat/princeprocessor
 RUN cd princeprocessor/src
 RUN make
