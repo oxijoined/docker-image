@@ -14,6 +14,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential && \
     rm -rf /var/lib/apt/lists/*
 
+RUN git clone https://github.com/Unic0rn28/hashcat-rules unicorn
+RUN git clone https://github.com/n0kovo/hashcat-rules-collection rules
+
+RUN git clone https://github.com/hashcat/princeprocessor . && \
+    cd princeprocessor/src && \
+    make
+
 WORKDIR /hashcat
 
 RUN git clone https://github.com/hashcat/hashcat.git . && \
