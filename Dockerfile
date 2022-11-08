@@ -13,9 +13,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     build-essential && \
     rm -rf /var/lib/apt/lists/*
-
+RUN git clone https://github.com/oxijoined/rules_of_nature rules
 WORKDIR /hashcat
 
 RUN git clone https://github.com/hashcat/hashcat.git . && \
     git submodule update --init && \
     make install
+
