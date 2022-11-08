@@ -20,4 +20,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: okcu/bebra
           tags: cuda,latest
-          dockerfile: cuda/Dockerfile
+          dockerfile: Dockerfile
