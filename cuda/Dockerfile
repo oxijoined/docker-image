@@ -1,7 +1,7 @@
 FROM nvidia/cuda:11.2.0-devel
 
 LABEL com.nvidia.volumes.needed="nvidia_driver"
-
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B469963BF863CC
 RUN echo "/usr/local/nvidia/lib" >> /etc/ld.so.conf.d/nvidia.conf && \
     echo "/usr/local/nvidia/lib64" >> /etc/ld.so.conf.d/nvidia.conf
 
