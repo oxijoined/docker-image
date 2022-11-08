@@ -16,6 +16,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN git clone https://github.com/oxijoined/rules_of_nature rules
 RUN apt get install wget
 RUN apt get install p7zip-full
+RUN git clone https://github.com/hashcat/princeprocessor
+RUN cd princeprocessor/src
+RUN make
 WORKDIR /hashcat
 
 RUN git clone https://github.com/hashcat/hashcat.git . && \
